@@ -2,7 +2,7 @@ import React from "react";
 import GameCard from "./GameCard";
 import Filter from "./Filter";
 import AddGame from "./AddGame";
-const Gamelist = ({games,onAddGame,filterTitle,setFilterTitle,minRating,setMinRating}) => {
+const Gamelist = ({games,onAddGame,filterTitle,setFilterTitle,minRating,setMinRating,setGames}) => {
   return (
     <section className="collection-section">
       <div className="collection-header">
@@ -24,7 +24,7 @@ const Gamelist = ({games,onAddGame,filterTitle,setFilterTitle,minRating,setMinRa
           {games.map((game)=><GameCard game={game}/>)}
         </div>
         <div className="collection-grid-side">
-          <AddGame />
+          <AddGame setGames={setGames} games={games}/>
         </div>
       </div>
     </section> 

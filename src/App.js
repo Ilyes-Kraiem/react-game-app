@@ -124,6 +124,7 @@ function App() {
               setFilterTitle={setFilterTitle}
               minRating={minRating}
               setMinRating={setMinRating}
+              setGames={setGames}
             />
           }
         />
